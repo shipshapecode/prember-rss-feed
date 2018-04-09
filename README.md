@@ -32,7 +32,7 @@ This tool assumes you use markdown files for your content. In each blog post ens
 ---
 title: Hello world
 description: howdy world
-categories: 
+categories:
   - obligatory post
   - greet
 author: Zoey
@@ -41,6 +41,8 @@ date: "2013-01-08 09:30"
 Hello world!
 
 ```
+
+This addon has a sample configuration in `config/rss-feed.js` and few blog posts for reference in `./tests/dummy/app/blog/`.
 
 License
 ------------------------------------------------------------------------------
