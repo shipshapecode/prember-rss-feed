@@ -1,7 +1,8 @@
 prember-rss-feed
 ==============================================================================
 
-[Short description of the addon.]
+Generate [RSS Feeds](https://validator.w3.org/feed/docs/rss2.html) for your prember prerendered
+fastboot blog.
 
 Installation
 ------------------------------------------------------------------------------
@@ -10,39 +11,36 @@ Installation
 ember install prember-rss-feed
 ```
 
-
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+Once installing the addon, you'll have a file `config/rss-feed.js` created that you
+can configure & use in your `ember-cli-build.js` as,
 
+```javascript
+let app = new EmberAddon(defaults, {
+  rssFeed: require('./config/rss-feed')
+});
+```
 
-Contributing
+Blog post meta data
 ------------------------------------------------------------------------------
 
-### Installation
+This tool assumes you use markdown files for your content. In each blog post ensure you have the following meta data
 
-* `git clone <repository-url>`
-* `cd prember-rss-feed`
-* `npm install`
+```markdown
+---
+title: Hello world
+description: howdy world
+categories: 
+  - obligatory post
+  - greet
+author: Zoey
+date: "2013-01-08 09:30"
+---
+Hello world!
 
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Running tests
-
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `ember try:each` – Runs the test suite against multiple Ember versions
-
-### Running the dummy application
-
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+```
 
 License
 ------------------------------------------------------------------------------

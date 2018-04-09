@@ -1,26 +1,32 @@
 {
   "name": "prember-rss-feed",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "Generate RSS feed for your prember blog",
   "keywords": [
+    "rss",
+    "prember",
+    "blogging tools",
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Sivakumar Kailasam <siva@rubberduck.engineering>",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/shipshapecode/prember-rss-feed",
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
     "start": "ember serve",
-    "test": "ember test",
-    "test:all": "ember try:each"
+    "test": "ember test"
   },
   "dependencies": {
+    "broccoli-file-creator": "1.1.1",
+    "broccoli-funnel": "2.0.1",
+    "chalk": "2.3.2",
     "ember-cli-babel": "^6.6.0",
+    "front-matter": "2.3.0",
+    "moment": "2.22.0",
     "rss": "^1.2.2"
   },
   "devDependencies": {
@@ -44,11 +50,11 @@
     "ember-source-channel-url": "^1.0.1",
     "ember-try": "^0.2.23",
     "eslint-plugin-ember": "^5.0.0",
-    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3"
   },
   "engines": {
-    "node": "^4.5 || 6.* || >= 7.*"
+    "node": "6.* || >= 7.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

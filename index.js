@@ -1,30 +1,34 @@
 'use strict';
 
-const RSS = require('rss');
+let rssFeedGenerator = require('./lib/rss-generator')
+let broccoliFileCreator = require('broccoli-file-creator');
+let Funnel = require('broccoli-funnel');
+let chalk = require('chalk');
 
 module.exports = {
   name: 'prember-rss-feed',
 
-  // TODO replace this with a real treeForPublic. This was just copied for reference from prember-sitemap-generator
+  isDevelopingAddon: () => true,
+
   treeForPublic() {
-    this._super.treeForPublic && this._super.treeForPublic.apply(this, arguments);
+    this._super.treeForPublic &&
+      this._super.treeForPublic.apply(this, arguments);
 
-    if (process.env.EMBER_ENV === 'production') {
-      const premberOptions = this.app.options['prember'];
-      const baseRoot = premberOptions.baseRoot;
-      if (!baseRoot) {
-        return this.ui.writeLine(chalk.red(
-          'ERROR: You must define `baseRoot` for prember-sitemap-generator to generate sitemaps.'
-        ));
-      }
-      const urls = premberOptions && premberOptions.urls ? premberOptions.urls : [];
-      const tree = writeFile('/prember-sitemap-generator/sitemap.xml', generateSitemap(baseRoot, urls));
+    let rssFeedOptions = this.app.options['rssFeed'];
 
-      this.ui.writeLine(chalk.green('sitemap.xml successfully created!'));
+    try {
+      let feedContent = rssFeedGenerator(rssFeedOptions);
 
-      return new Funnel(tree, {
-        srcDir: 'prember-sitemap-generator'
-      });
+      let tree = broccoliFileCreator('/prember-rss-feed/feed.xml', feedContent);
+
+      this.ui.writeLine(chalk.green('RSS Feed created successfully'));
+
+      return new Funnel(tree, { srcDir: 'prember-rss-feed' });
+
+    } catch(e) {
+      this.ui.writeLine(chalk.red('RSS Feed generation failed'));
+      this.ui.writeLine(e);
     }
+
   }
 };
