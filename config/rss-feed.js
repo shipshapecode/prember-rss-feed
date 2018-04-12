@@ -29,7 +29,7 @@ module.exports = {
 
   /** Actual URL of individual blog post */
   urlForPost(postMeta) {
-    return `${siteURL}/blog/${postMeta.slug}`;
+    return `${siteURL}/blog/${postMeta.slug}/`;
   }
 
 };
