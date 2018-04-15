@@ -26,6 +26,7 @@
     "chalk": "2.3.2",
     "ember-cli-babel": "^6.6.0",
     "front-matter": "2.3.0",
+    "glob": "7.1.2",
     "marked": "0.3.19",
     "moment": "2.22.0",
     "rss": "^1.2.2"
