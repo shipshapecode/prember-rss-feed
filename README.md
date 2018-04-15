@@ -1,4 +1,4 @@
-prember-rss-feed
+prember-rss-feed [![Build Status](https://travis-ci.org/shipshapecode/prember-rss-feed.svg?branch=master)](https://travis-ci.org/shipshapecode/prember-rss-feed)
 ==============================================================================
 
 Generate [RSS Feeds](https://validator.w3.org/feed/docs/rss2.html) for your prember prerendered
