@@ -28,4 +28,4 @@ install:
 
 script:
   - yarn lint:js
-  - yarn testt
+  - yarn test
