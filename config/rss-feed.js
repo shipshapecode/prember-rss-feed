@@ -3,7 +3,6 @@
 let siteURL = 'http://example.com';
 
 module.exports = {
-
   feed: {
     title: 'My awesome blog',
 
@@ -31,5 +30,4 @@ module.exports = {
   urlForPost(postMeta) {
     return `${siteURL}/blog/${postMeta.slug}/`;
   }
-
 };
