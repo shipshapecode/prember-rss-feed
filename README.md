@@ -9,7 +9,7 @@ prember-rss-feed
 ![Download count all time](https://img.shields.io/npm/dt/prember-rss-feed.svg)
 [![npm](https://img.shields.io/npm/dm/prember-rss-feed.svg)]()
 [![Ember Observer Score](http://emberobserver.com/badges/prember-rss-feed.svg)](http://emberobserver.com/addons/prember-rss-feed)
-[![Build Status](https://travis-ci.org/shipshapecode/prember-rss-feed.svg)](https://travis-ci.org/shipshapecode/prember-rss-feed)
+[![Build Status](https://travis-ci.org/shipshapecode/prember-rss-feed.svg)](https://travis-ci.org/shipshapecode/prember-rss-feed) [![Greenkeeper badge](https://badges.greenkeeper.io/shipshapecode/prember-rss-feed.svg)](https://greenkeeper.io/)
 
 Generate [RSS Feeds](https://validator.w3.org/feed/docs/rss2.html) for your prember prerendered
 fastboot blog.
