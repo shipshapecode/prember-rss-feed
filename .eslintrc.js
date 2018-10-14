@@ -15,13 +15,13 @@ module.exports = {
     browser: true
   },
   rules: {
-
   },
   overrides: [
     // node files
     {
       files: [
         'lib/**/*.js',
+        '.template-lintrc.js',
         'ember-cli-build.js',
         'index.js',
         'testem.js',

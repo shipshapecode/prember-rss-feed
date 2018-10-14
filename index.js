@@ -6,7 +6,7 @@ let Funnel = require('broccoli-funnel');
 let chalk = require('chalk');
 
 module.exports = {
-  name: 'prember-rss-feed',
+  name: require('./package').name,
 
   treeForPublic() {
     this._super.treeForPublic && this._super.treeForPublic.apply(this, arguments);
